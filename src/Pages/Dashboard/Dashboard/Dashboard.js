@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav } from "react-bootstrap";
+import { Nav, Tab } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import AddProduct from "../AddProduct/AddProduct";
 import AddReview from "../AddReview/AddReview";
@@ -11,7 +11,7 @@ import Pay from "../Pay/Pay";
 const Dashboard = () => {
   let { path, url } = useRouteMatch();
   return (
-    <Container fluid>
+    <Tab.Container>
       <div className="row">
         <div className="col-md-2">
           <Nav justify variant="tabs" className="flex-column">
@@ -40,33 +40,35 @@ const Dashboard = () => {
           </Nav>
         </div>
         <div className="col-md-10 mx-auto">
-          <Switch>
-            <Route exact path={path}></Route>
-            <Route path={`${path}/myOrders`}>
-              <MyOrders />
-            </Route>
-            <Route path={`${path}/addReview`}>
-              <AddReview />
-            </Route>
-            <Route path={`${path}/pay`}>
-              <Pay />
-            </Route>
-            <Route path={`${path}/allOrders`}>
-              <AllOrders />
-            </Route>
-            <Route path={`${path}/addProduct`}>
-              <AddProduct />
-            </Route>
-            <Route path={`${path}/makeAdmin`}>
-              <MakeAdmin />
-            </Route>
-            <Route path={`${path}/allProducts`}>
-              <AllProducts />
-            </Route>
-          </Switch>
+          <Tab.Content>
+            <Switch>
+              <Route exact path={path}></Route>
+              <Route path={`${path}/myOrders`}>
+                <MyOrders />
+              </Route>
+              <Route path={`${path}/addReview`}>
+                <AddReview />
+              </Route>
+              <Route path={`${path}/pay`}>
+                <Pay />
+              </Route>
+              <Route path={`${path}/allOrders`}>
+                <AllOrders />
+              </Route>
+              <Route path={`${path}/addProduct`}>
+                <AddProduct />
+              </Route>
+              <Route path={`${path}/makeAdmin`}>
+                <MakeAdmin />
+              </Route>
+              <Route path={`${path}/allProducts`}>
+                <AllProducts />
+              </Route>
+            </Switch>
+          </Tab.Content>
         </div>
       </div>
-    </Container>
+    </Tab.Container>
   );
 };
 

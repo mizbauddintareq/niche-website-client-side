@@ -23,6 +23,8 @@ const useFirebase = () => {
         setError("");
         const newUser = { email, displayName: name };
         setUser(newUser);
+        // save user to the database
+        saveUser(email, name);
 
         // set name after register
         updateProfile(auth.currentUser, {
@@ -37,6 +39,18 @@ const useFirebase = () => {
         setError(error.message);
       })
       .finally(() => setLoading(false));
+
+    // save user info
+    const saveUser = (email, displayName) => {
+      const user = { email, displayName };
+      fetch("http://localhost:5000/user", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }).then();
+    };
   };
 
   // user login
