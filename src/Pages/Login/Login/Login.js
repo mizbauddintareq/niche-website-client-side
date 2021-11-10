@@ -14,15 +14,15 @@ const Login = () => {
     console.log(data);
   };
   return (
-    <Container>
+    <Container className="my-5">
       <div className="row">
         <div className="col-md-5 mx-auto text-center">
-          <h2>Please Login</h2>
-          <p>
-            Don't have an account? <Link to="/register">Please Register</Link>
-          </p>
           {!loading && (
             <div className="card shadow-lg p-3 mb-5 bg-body rounded">
+              <p>
+                Don't have an account?{" "}
+                <Link to="/register">Please Register</Link>
+              </p>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   className="p-2 mb-2 form-control"
@@ -37,16 +37,16 @@ const Login = () => {
                   {...register("password")}
                 />
                 <input
-                  className="btn btn-success"
+                  className="btn mb-3 btn-success px-5"
                   type="submit"
                   value="Login"
                 />
               </form>
+              {error && <Alert variant="danger">{error}</Alert>}
             </div>
           )}
           {loading && <Spinner animation="border" variant="info" />}
           {user?.email && <Alert variant="success">Login Successful</Alert>}
-          {error && <Alert variant="danger">{error}</Alert>}
         </div>
       </div>
     </Container>

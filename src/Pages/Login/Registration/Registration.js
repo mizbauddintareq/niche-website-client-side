@@ -41,18 +41,18 @@ const Registration = () => {
                   {...register("password")}
                 />
                 <input
-                  className="btn btn-success"
+                  className="btn mb-3 btn-success px-5"
                   type="submit"
                   value="Register"
                 />
               </form>
+              {error && <Alert variant="danger">{error}</Alert>}
             </div>
           )}
           {loading && <Spinner animation="border" variant="info" />}
           {user?.email && (
             <Alert variant="success">Registration Successful</Alert>
           )}
-          {error && <Alert variant="danger">{error}</Alert>}
         </div>
       </div>
     </Container>

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "GYM",
+    "price": 99,
+    "thumb": "https://i.ibb.co/5cG7mmY/pexels-sabel-blanco-1756959.jpg",
+    "text": "Exercise has been shown to improve your mood and decrease feelings of depression, anxiety, and stress.It produces changes in the parts of the brain that regulate stress and anxiety. It can also increase brain sensitivity for the hormones serotonin and norepinephrine, which relieve feelings of depression."
+  },
+  {
+    "id": 2,
+    "name": "YOGA",
+    "price": 110,
+    "thumb": "https://i.ibb.co/MStNQqL/yoga.jpg",
+    "text": "Yoga offers physical and mental health benefits for people of all ages. And, if you’re going through an illness, recovering from surgery or living with a chronic condition, yoga can become an integral part of your treatment and potentially hasten healing. "
+  },
+  {
+    "id": 3,
+    "name": "DANCING",
+    "price": 50,
+    "thumb": "https://i.ibb.co/3hR4xj4/dancing.jpg",
+    "text": "improved condition of your heart and lungs,increased muscular strength, endurance and motor fitness,increased aerobic fitness,improved muscle tone and strength,weight management,stronger bones and reduced risk of osteoporosis,better coordination, agility and flexibility."
+  },
+  {
+    "id": 4,
+    "name": "BOXING",
+    "price": 65,
+    "thumb": "https://i.ibb.co/SBNjKBX/boxing.jpg",
+    "text": "There's no proof that fitness boxing is superior to any other types of exercise, but it does have many health benefits. One is strength.You're swinging your arms, moving the muscles of your arms and shoulders, increasing your upper-body strength."
+  },
+  {
+    "id": 5,
+    "name": "MUSCLE BUILD PRO",
+    "price": 70,
+    "thumb": "https://i.ibb.co/N3KsYMD/id-5.jpg",
+    "text": "Mussels are a clean and nutritious source of protein, as well as being a great source of omega 3 fatty acids, zinc and folate, and they exceed the recommended daily intake of selenium, iodine and iron. Mussels are sustainably farmed with no negative impact to the environment."
+  },
+  {
+    "id": 6,
+    "name": "WOMEN STRENGTH TRAINING",
+    "price": 80,
+    "thumb": "https://i.ibb.co/phDYBrr/pexels-pixabay-414029.jpg",
+    "text": "We recommend you do exercises like lunges and squats, with moderate weight. Single leg exercises such as a lunge, will be better for you if feel like your legs bulk up quickly, but priority is doing aerobics three times a week and a sensible diet. Please don't be afraid of strength training."
+  },
+  {
+    "id": 7,
+    "name": "FAT BURNING PRO",
+    "price": 98,
+    "thumb": "https://i.ibb.co/fN6wKGL/pexels-andres-ayrton-6551098.jpg",
+    "text": "Fat-burning ingredients shown to be effective. There's no evidence that fat-burning pills or supplements can effectively burn fat. But they do typically contain ingredients that won't hurt you in small doses when taken alone. Some are even proven to help burn fat when they're consumed naturally."
+  },
+  {
+    "id": 8,
+    "name": "YOGA FIT FOR PREGNANT",
+    "price": 56,
+    "thumb": "https://i.ibb.co/wM2d0Hk/pexels-pavel-danilyuk-7055698-2.jpg",
+    "text": "Prenatal yoga, hatha yoga and restorative yoga are the best choices for pregnant women. Talk to the instructor about your pregnancy before starting any other yoga class. Be careful to avoid hot yoga, which involves doing vigorous poses in a room heated to higher temperatures."
+  },
+  {
+    "id": 9,
+    "name": "PROTEIN SUPPLEMENTS",
+    "price": 200,
+    "thumb": "https://i.ibb.co/p1rc6w5/pexels-polina-tankilevitch-3875427.jpg",
+    "text": "Rice protein powder may have the same muscle-building benefits as whey protein, per a 2020 study involving healthy men (11). Hemp protein is another great option, as hemp is a complete protein, which means it contains all nine essential amino acids. It's also easy to digest."
+  },
+  {
+    "id": 10,
+    "name": "WEIGHT LIFTING",
+    "price": 64,
+    "thumb": "https://i.ibb.co/2547cqK/pexels-victor-freitas-791763.jpg",
+    "text": "FWeight training is also an important component of burning off belly fat. Since muscles burn off more calories than fat does when the body is at rest, having more muscle tone can help you to burn off more fat."
+  },
+  {
+    "id": 11,
+    "name": "RUNNING",
+    "price": 78,
+    "thumb": "https://i.ibb.co/wZkTN0c/pexels-andrea-piacquadio-3764538.jpg",
+    "text": "You can lose weight just by running if your routine boosts your activity level beyond what it was before. So if you never exercise and you start running—even just around the block every day or running for 30 minutes"
+  },
+  {
+    "id": 12,
+    "name": "CYCLING",
+    "price": 30,
+    "thumb": "https://i.ibb.co/F6FW68Y/pexels-julia-larson-6456019.jpg",
+    "text": "In general, running burns more calories than cycling because it uses more muscles. However, cycling is gentler on the body, and you may be able to do it longer or faster than you can run."
+  },
+  {
+    "id": 13,
+    "name": "BODY BUILDING PRO",
+    "price": 175,
+    "thumb": "https://i.ibb.co/jbzTmrV/pexels-pixabay-38630.jpg",
+    "text": "Bodybuilding, weight training and aerobic exercise increase self-esteem, improve your health and body, lift your mood, reduce stress and frustration, improve your sleeping patterns, distract your mind from worries and difficult life events and situations, help you gain control of your life"
+  },
+  {
+    "id": 14,
+    "name": "KARATE",
+    "price": 150,
+    "thumb": "https://i.ibb.co/ZYT0FFV/pexels-haste-leart-v-690598.jpg",
+    "text": "Karate can be effective and good for both self-defense and a real-life fighting situation with it's equal drawbacks ie. Single karate techniques as well as the low stances and rigid footwork, which allows for quick and flexible movement, can be fairly effective in a real fight or for self-defense."
+  },
+  {
+    "id": 15,
+    "name": "KONG FU",
+    "price": 180,
+    "thumb": "https://i.ibb.co/LkKJhd5/pexels-lan-yao-6724208.jpg",
+    "text": "It strengthens the body and the mind. Originally the goal of training Kung Fu was to become a well conditioned and deadly fighter because back in the day your life might well depend on it. Today we can use the traditional exercises and forms of Kung Fu to get a great workout."
+  },
+  {
+    "id": 16,
+    "name": "KIDS PROGRAM",
+    "price": 90,
+    "thumb": "https://i.ibb.co/d4gjw3h/pexels-cottonbro-4752871.jpg",
+    "text": "Children and adolescents ages 6 through 17 years should do 60 minutes (1 hour) or more of moderate-to-vigorous intensity physical activity each day, including daily aerobic – and activities that strengthen bones (like running or jumping) – 3 days each week, and that build muscles (like climbing or doing push-ups)"
+  },
+  {
+    "id": 17,
+    "name": "FITNESS (GYM & CARDIO)",
+    "price": 130,
+    "thumb": "https://i.ibb.co/C2WqQqF/pexels-mikhail-nilov-6740297.jpg",
+    "text": "Over time, regular cardio exercise allows your muscles to adapt to an increased workload, making regular activities seem easier. When paired with a heart-healthy nutrition plan, safe weight loss comes with doing regular cardio exercise."
+  },
+  {
+    "id": 18,
+    "name": "PILATES FITNESS",
+    "price": 45,
+    "thumb": "https://i.ibb.co/XpCSHM6/pexels-nicholas-fu-9288101.jpg",
+    "text": "How often do I need to do Pilates to get results?” This question comes up a lot with newcomers to the Pilates method, and sometimes with veterans of the technique too. Standard guidelines suggest that a minimum of twice to three times per week is necessary to get good results."
+  },
+  {
+    "id": 19,
+    "name": "POWER YOGA",
+    "price": 76,
+    "thumb": "https://i.ibb.co/MNQH2bB/pexels-hong-son-4010069.jpg",
+    "text": "Power yoga enthusiasts say it enhances stamina, flexibility, posture, and mental focus. Like all physical activities, it also relieves tension,and releases toxins through sweat. Because it is rigorous, it burns more calories than most traditional forms of yoga and therefore can help with weight loss."
+  },
+  {
+    "id": 20,
+    "name": "MARTIAL ARTS FOR KIDS",
+    "price": 134,
+    "thumb": "https://i.ibb.co/JR6wJFr/pexels-cottonbro-7988769.jpg",
+    "text": "Consistent training not only conditions the mind and body to have strength and stamina to fight back in a violent situation but also helps the body fight disease, stay flexible, strong and active as people age. Martial arts provides stress relief and ways to release pent up energy."
+  }
+]
