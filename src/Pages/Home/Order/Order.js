@@ -15,7 +15,7 @@ const Order = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     data.status = "pending";
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://sleepy-bastion-40732.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -38,7 +38,7 @@ const Order = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/product/${id}`)
+    fetch(`https://sleepy-bastion-40732.herokuapp.com/product/${id}`)
       .then((res) => res.json())
       .then((data) => setPd(data));
   }, []);

@@ -2,14 +2,21 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import drone from "../../../images/drone.jpg";
+import Loading from "../../Loading/Loading";
 const MainProducts = () => {
   const [products, setProducts] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://sleepy-bastion-40732.herokuapp.com/allProducts")
       .then((res) => res.json())
-      .then((data) => setProducts(data.slice(0, 6)));
+      .then((data) => {
+        setProducts(data.slice(0, 6));
+        setIsLoading(false);
+      });
   }, []);
+  if (isLoading) {
+    return Loading();
+  }
   return (
     <div>
       <div className="bg-dark text-white my-5">

@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Loading from "../../Loading/Loading";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://sleepy-bastion-40732.herokuapp.com/allProducts")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+        setIsLoading(false);
+      });
   }, []);
+  if (isLoading) {
+    return Loading();
+  }
   return (
     <Container fluid>
       <h1>This is products</h1>

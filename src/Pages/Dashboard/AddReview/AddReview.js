@@ -6,7 +6,7 @@ const AddReview = () => {
   const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/review", {
+    fetch("https://sleepy-bastion-40732.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

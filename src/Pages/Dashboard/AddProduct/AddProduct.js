@@ -7,7 +7,7 @@ const AddProduct = () => {
   const { loading } = useAuth();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addProduct", {
+    fetch("https://sleepy-bastion-40732.herokuapp.com/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",

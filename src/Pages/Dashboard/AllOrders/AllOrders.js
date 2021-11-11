@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Loading from "../../Loading/Loading";
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://sleepy-bastion-40732.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
-        // setIsLoading(false);
+        setIsLoading(false);
       });
   }, [orders, isDelete]);
 
@@ -29,7 +30,7 @@ const AllOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delOrder/${id}`, {
+        fetch(`https://sleepy-bastion-40732.herokuapp.com/delOrder/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -44,8 +45,8 @@ const AllOrders = () => {
   };
   const handleStatus = (id) => {
     const updateStatus = orders.find((update) => update?._id === id);
-    updateStatus.status = "approved";
-    const uri = `http://localhost:5000/status/${id}`;
+    updateStatus.status = "shipped";
+    const uri = `https://sleepy-bastion-40732.herokuapp.com/status/${id}`;
     fetch(uri, {
       method: "PUT",
       headers: {
@@ -66,9 +67,9 @@ const AllOrders = () => {
         }
       });
   };
-  // if (isLoading) {
-  //   return Loading();
-  // }
+  if (isLoading) {
+    return Loading();
+  }
   return (
     <Container fluid>
       <div className="row g-4">

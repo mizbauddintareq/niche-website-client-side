@@ -3,18 +3,19 @@ import { Button, Container } from "react-bootstrap";
 import useAuth from "../../Context/useAuth";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Loading from "../../Loading/Loading";
 const MyOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder/${user?.email}`)
+    fetch(`https://sleepy-bastion-40732.herokuapp.com/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
-        // setIsLoading(false);
+        setIsLoading(false);
       });
   }, [user.email, isDelete]);
 
@@ -31,7 +32,7 @@ const MyOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delOrder/${id}`, {
+        fetch(`https://sleepy-bastion-40732.herokuapp.com/delOrder/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -44,9 +45,9 @@ const MyOrders = () => {
       }
     });
   };
-  // if (isLoading) {
-  //   return Loading();
-  // }
+  if (isLoading) {
+    return Loading();
+  }
   return (
     <Container fluid>
       <div className="row g-4">

@@ -2,17 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Loading from "../../Loading/Loading";
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://sleepy-bastion-40732.herokuapp.com/allProducts")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        // setIsLoading(false);
+        setIsLoading(false);
       });
   }, [products, isDelete]);
 
@@ -29,7 +30,7 @@ const AllProducts = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delProduct/${id}`, {
+        fetch(`https://sleepy-bastion-40732.herokuapp.com/delProduct/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -47,9 +48,9 @@ const AllProducts = () => {
     });
   };
 
-  // if (isLoading) {
-  //   return Loading();
-  // }
+  if (isLoading) {
+    return Loading();
+  }
   return (
     <Container fluid>
       <div className="row g-4">

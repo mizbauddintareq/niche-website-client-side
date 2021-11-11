@@ -17,15 +17,16 @@ const Dashboard = () => {
       <div className="row">
         <div className="col-md-2">
           <Nav justify variant="tabs" className="flex-column">
+            <Nav.Link as={Link} to={`${url}/pay`}>
+              Pay
+            </Nav.Link>
             <Nav.Link as={Link} to={`${url}/myOrders`}>
               My Orders
             </Nav.Link>
             <Nav.Link as={Link} to={`${url}/addReview`}>
               Review
             </Nav.Link>
-            <Nav.Link as={Link} to={`${url}/pay`}>
-              Pay
-            </Nav.Link>
+
             {admin && (
               <Nav justify variant="tabs" className="flex-column">
                 <Nav.Link as={Link} to={`${url}/allOrders`}>

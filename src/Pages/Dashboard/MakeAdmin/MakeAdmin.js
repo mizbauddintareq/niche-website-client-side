@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Alert } from "react-bootstrap";
+import React from "react";
+
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 const MakeAdmin = () => {
-  const [success, setSuccess] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/admin", {
+    fetch("https://sleepy-bastion-40732.herokuapp.com/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -15,7 +15,13 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {
-          setSuccess(true);
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "An admin is added successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           reset();
         }
       });
@@ -25,15 +31,12 @@ const MakeAdmin = () => {
       <div className="row">
         <div className="col-md-5 mx-auto text-center">
           <div className="card shadow-lg p-3 mb-5 bg-body rounded">
-            {success && (
-              <Alert variant="success">Successfully Make An Admin</Alert>
-            )}
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className="p-2 mb-4 form-control"
                 placeholder="Enter Email"
                 type="email"
-                {...register("email")}
+                {...register("email", { required: true })}
               />
 
               <input

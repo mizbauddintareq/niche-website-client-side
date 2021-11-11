@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Card, Carousel, Col, Container, Image, Row } from "react-bootstrap";
+import Rating from "react-rating";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://sleepy-bastion-40732.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -38,6 +39,13 @@ const Reviews = () => {
                     <Card.Text>
                       <h6>{review.email}</h6>
                       <p>{review.comment}</p>
+                      <Rating
+                        className="text-warning"
+                        initialRating={review.rating}
+                        emptySymbol="far fa-star"
+                        fullSymbol="fas fa-star"
+                        readonly
+                      />
                     </Card.Text>
                   </Card.Body>
                 </Card>
