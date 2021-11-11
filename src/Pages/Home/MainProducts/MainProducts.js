@@ -19,7 +19,7 @@ const MainProducts = () => {
   }
   return (
     <div>
-      <div className="bg-dark text-white my-5">
+      <div className=" text-white my-5">
         <Container fluid>
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-6">
@@ -31,19 +31,23 @@ const MainProducts = () => {
               />
             </div>
             <div className="col-md-6">
-              <h1 className="text-center">DJI FPV DRONE COMBO</h1>
-              <p>
+              <h1 className="text-center text-danger fw-bold">
+                DJI FPV DRONE COMBO
+              </h1>
+              <p style={{ color: "#3d5a80", fontWeight: "bold" }}>
                 Fly through the sky in ways that seem impossible. We never lost
                 our passion for flying, and with DJI FPV, those passions have
                 turned imagination into reality. With this immersive and
                 intuitive aerial platform, get ready to go into the beyond.
               </p>
-              <p>
+              <p style={{ color: "#3d5a80", fontWeight: "bold" }}>
                 Immersive Flight Experience | 4K/60fps Super-Wide 150° FOV |
                 Emergency Brake and Hover | 10km HD Low-Latency Video
                 Transmission
               </p>
-              <Button>Shop Now</Button>
+              <Button className="px-4" style={{ backgroundColor: "#ee6c4d" }}>
+                Shop Now
+              </Button>
             </div>
           </div>
         </Container>

@@ -5,6 +5,7 @@ import withReactContent from "sweetalert2-react-content";
 import Loading from "../../Loading/Loading";
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
+  const [status, setStatus] = useState(true);
   const [isDelete, setIsDelete] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,8 +15,9 @@ const AllOrders = () => {
       .then((data) => {
         setOrders(data);
         setIsLoading(false);
+        setStatus(false);
       });
-  }, [orders, isDelete]);
+  }, [status, isDelete]);
 
   const handleDelete = (id) => {
     const MySwal = withReactContent(Swal);
@@ -64,6 +66,7 @@ const AllOrders = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          setStatus(true);
         }
       });
   };
