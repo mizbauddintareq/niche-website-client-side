@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Context/useAuth";
+import Swal from "sweetalert2";
 const AddProduct = () => {
   const { loading } = useAuth();
   const { register, handleSubmit, reset } = useForm();
@@ -16,7 +17,13 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("product added successfully");
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Product added successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           reset();
         }
       });
@@ -33,25 +40,25 @@ const AddProduct = () => {
                   className="p-2 mb-2 form-control"
                   type="text"
                   placeholder="Drone Name"
-                  {...register("name")}
+                  {...register("name", { required: true })}
                 />
                 <input
                   className="p-2 mb-2 form-control"
                   type="text"
                   placeholder="Price"
-                  {...register("price")}
+                  {...register("price", { required: true })}
                 />
                 <input
                   className="p-2 mb-2 form-control"
                   type="text"
                   placeholder="Image URL"
-                  {...register("thumb")}
+                  {...register("thumb", { required: true })}
                 />
                 <textarea
                   className="p-2 mb-2 form-control"
                   type="text"
                   placeholder="Description"
-                  {...register("des")}
+                  {...register("des", { required: true })}
                 />
 
                 <input

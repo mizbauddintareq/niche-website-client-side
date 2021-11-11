@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const AllOrders = () => {
   const [orders, setOrders] = useState([]);
   const [isDelete, setIsDelete] = useState(false);
@@ -16,18 +17,30 @@ const AllOrders = () => {
   }, [orders, isDelete]);
 
   const handleDelete = (id) => {
-    const proceed = window.confirm("Are You Want to delete data??");
-    if (proceed) {
-      fetch(`http://localhost:5000/delOrder/${id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          if (result.deletedCount) {
-            setIsDelete(!isDelete);
-          }
-        });
-    }
+    const MySwal = withReactContent(Swal);
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delOrder/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            if (result.deletedCount) {
+              setIsDelete(!isDelete);
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          });
+      }
+    });
   };
   const handleStatus = (id) => {
     const updateStatus = orders.find((update) => update?._id === id);
@@ -43,7 +56,13 @@ const AllOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          alert("updated successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Order status approved",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       });
   };

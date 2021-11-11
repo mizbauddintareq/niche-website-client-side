@@ -1,6 +1,7 @@
 import React from "react";
-import { Nav, Tab } from "react-bootstrap";
+import { Container, Nav, Tab } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import useAuth from "../../Context/useAuth";
 import AddProduct from "../AddProduct/AddProduct";
 import AddReview from "../AddReview/AddReview";
 import AllOrders from "../AllOrders/AllOrders";
@@ -9,9 +10,10 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import MyOrders from "../MyOrders/MyOrders";
 import Pay from "../Pay/Pay";
 const Dashboard = () => {
+  const { admin, logOut } = useAuth();
   let { path, url } = useRouteMatch();
   return (
-    <Tab.Container>
+    <Container fluid>
       <div className="row">
         <div className="col-md-2">
           <Nav justify variant="tabs" className="flex-column">
@@ -24,19 +26,25 @@ const Dashboard = () => {
             <Nav.Link as={Link} to={`${url}/pay`}>
               Pay
             </Nav.Link>
-            <Nav.Link as={Link} to={`${url}/allOrders`}>
-              Manage All Orders
+            {admin && (
+              <Nav justify variant="tabs" className="flex-column">
+                <Nav.Link as={Link} to={`${url}/allOrders`}>
+                  Manage All Orders
+                </Nav.Link>
+                <Nav.Link as={Link} to={`${url}/addProduct`}>
+                  Add A Product
+                </Nav.Link>
+                <Nav.Link as={Link} to={`${url}/makeAdmin`}>
+                  Make An Admin
+                </Nav.Link>
+                <Nav.Link as={Link} to={`${url}/allProducts`}>
+                  Manage Products
+                </Nav.Link>
+              </Nav>
+            )}
+            <Nav.Link style={{ cursor: "pointer" }} onClick={logOut}>
+              Logout
             </Nav.Link>
-            <Nav.Link as={Link} to={`${url}/addProduct`}>
-              Add A Product
-            </Nav.Link>
-            <Nav.Link as={Link} to={`${url}/makeAdmin`}>
-              Make An Admin
-            </Nav.Link>
-            <Nav.Link as={Link} to={`${url}/allProducts`}>
-              Manage Products
-            </Nav.Link>
-            <Nav.Link>Logout</Nav.Link>
           </Nav>
         </div>
         <div className="col-md-10 mx-auto">
@@ -68,7 +76,7 @@ const Dashboard = () => {
           </Tab.Content>
         </div>
       </div>
-    </Tab.Container>
+    </Container>
   );
 };
 

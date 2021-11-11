@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import useAuth from "../../Context/useAuth";
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const MyOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
@@ -18,18 +19,30 @@ const MyOrders = () => {
   }, [user.email, isDelete]);
 
   const handleDelete = (id) => {
-    const proceed = window.confirm("Are You Want to delete data??");
-    if (proceed) {
-      fetch(`http://localhost:5000/delOrder/${id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((result) => {
-          if (result.deletedCount) {
-            setIsDelete(!isDelete);
-          }
-        });
-    }
+    const MySwal = withReactContent(Swal);
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delOrder/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            if (result.deletedCount) {
+              setIsDelete(!isDelete);
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+            }
+          });
+      }
+    });
   };
   // if (isLoading) {
   //   return Loading();

@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 import { Card, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useHistory, useLocation, useParams } from "react-router";
 import useAuth from "../../Context/useAuth";
 const Order = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const redirect_Uri = location.state?.from || "/dashboard/myOrders";
   const { id } = useParams();
   const { user } = useAuth();
   const [pd, setPd] = useState({});
@@ -20,8 +25,14 @@ const Order = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Your Order Has Been Confirmed");
-          reset();
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your order has been confirmed",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          history.push(redirect_Uri);
         }
       });
   };
