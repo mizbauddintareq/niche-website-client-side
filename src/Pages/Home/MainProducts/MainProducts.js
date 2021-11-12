@@ -34,19 +34,31 @@ const MainProducts = () => {
               <h1 className="text-center text-danger fw-bold">
                 DJI FPV DRONE COMBO
               </h1>
-              <p style={{ color: "#3d5a80", fontWeight: "bold" }}>
+              <p
+                style={{
+                  color: "#3d5a80",
+                  fontWeight: "bold",
+                  lineHeight: "1.5",
+                }}
+              >
                 Fly through the sky in ways that seem impossible. We never lost
                 our passion for flying, and with DJI FPV, those passions have
                 turned imagination into reality. With this immersive and
                 intuitive aerial platform, get ready to go into the beyond.
               </p>
-              <p style={{ color: "#3d5a80", fontWeight: "bold" }}>
+              <p
+                style={{
+                  color: "#3d5a80",
+                  fontWeight: "bold",
+                  lineHeight: "1.5",
+                }}
+              >
                 Immersive Flight Experience | 4K/60fps Super-Wide 150° FOV |
                 Emergency Brake and Hover | 10km HD Low-Latency Video
                 Transmission
               </p>
               <Button className="px-4" style={{ backgroundColor: "#ee6c4d" }}>
-                Shop Now
+                See More
               </Button>
             </div>
           </div>

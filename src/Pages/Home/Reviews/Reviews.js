@@ -17,7 +17,7 @@ const Reviews = () => {
           CUSTOMER REVIEWS
         </h1>
 
-        <p className="fw-bold" style={{ color: "#3d5a80" }}>
+        <p className="fw-bold" style={{ color: "#3d5a80", lineHeight: "1.7" }}>
           With the consistent growth of drone technology with drones being
           utilized across a full spectrum of applications, the need for high
           quality, reliable drones is growing as well. We understand that our

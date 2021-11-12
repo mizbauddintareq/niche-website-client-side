@@ -26,67 +26,51 @@ const Footer = () => {
       <div className="container text-center text-md-start">
         <div className="row text-center text-md-start">
           <div className="col-md-3 mx-auto mt-3">
-            <h5
-              className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#9d0208" }}
-            >
-              drones world
-            </h5>
-            <p>
+            <h5 className="text-uppercase mb-4 text-white">drones world</h5>
+            <p style={{ lineHeight: "1.7" }}>
               Drones World specializes in the supply of high-end drones for a
               variety of commercial, private, and recreational needs. A leading
               DJI-authorized service center, we’re able to deliver the highest
               quality drones at the highest quality service. Whether you require
-              drones for aerial filming, videography, surveying, or anything
-              else, we have the drones available to suit your needs. With an
-              extensive product range as well as custom drone solutions
-              available.
+              drones for aerial filming.
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5
-              className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#9d0208" }}
-            >
-              offers
+            <h5 className="text-uppercase mb-4 text-white">
+              drones collections
             </h5>
             <p>
               {" "}
-              <p>Maldives Beaches</p>{" "}
+              <p>SANROCK U52 DRONE</p>{" "}
             </p>
             <p>
               {" "}
-              <p>Bali, Indonesia</p>{" "}
+              <p>FOLDABLE GPS DRONE</p>{" "}
             </p>
             <p>
               {" "}
-              <p>Pattaya Beach</p>{" "}
+              <p>DJI MAVIC 3 FLY</p>{" "}
             </p>
             <p>
               {" "}
-              <p>The Eiffel Tower</p>{" "}
+              <p>POTENSIC ELFIN 2K DRONES</p>{" "}
             </p>
             <p>
               {" "}
-              <p>Hawaii Islands</p>{" "}
+              <p>HR Q1 DRONE</p>{" "}
             </p>
             <p>
               {" "}
-              <p>Great Wall Of China</p>{" "}
+              <p>RUKO U11 PRO DRONE</p>{" "}
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5
-              className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#9d0208" }}
-            >
-              useful links
-            </h5>
+            <h5 className="text-uppercase mb-4 text-white">useful links</h5>
             <p>
               {" "}
-              <p>Agents</p>{" "}
+              <p>Tech Team</p>{" "}
             </p>
             <p>
               {" "}
@@ -102,7 +86,7 @@ const Footer = () => {
             </p>
             <p>
               {" "}
-              <p>Booking</p>{" "}
+              <p>Support</p>{" "}
             </p>
             <p>
               {" "}
@@ -111,10 +95,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
-            <h5
-              className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#9d0208" }}
-            >
+            <h5 className="text-uppercase mb-4 text-white">
               contact information
             </h5>
             <p>
@@ -125,12 +106,11 @@ const Footer = () => {
               <FontAwesomeIcon icon={faPhone} /> 088 +880 1580541540
             </p>
             <p>
-              <FontAwesomeIcon icon={faEnvelope} />{" "}
-              contact@breakthroughtravels.com
+              <FontAwesomeIcon icon={faEnvelope} /> info@dronesworld.com
             </p>
             <p>
               <FontAwesomeIcon icon={faFirefoxBrowser} />{" "}
-              www.breakthrough-travel.web.app
+              www.drones-world-811b7.web.app
             </p>
           </div>
         </div>
@@ -139,7 +119,7 @@ const Footer = () => {
           <div className=" col-md-7 ">
             <p>
               {" "}
-              <span style={{ color: "#9d0208" }}>Mizba Uddin Tareq</span> © 2021
+              <span style={{ color: "white" }}>Mizba Uddin Tareq</span> © 2021
               All Right Reserved
             </p>
           </div>
@@ -149,7 +129,7 @@ const Footer = () => {
               <ul className="list-unstyled list-inline">
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#3d5a80" }}
+                    style={{ color: "white" }}
                     className="me-2"
                     icon={faFacebookSquare}
                     size="2x"
@@ -157,7 +137,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#3d5a80" }}
+                    style={{ color: "white" }}
                     className=" me-2"
                     icon={faTwitterSquare}
                     size="2x"
@@ -165,7 +145,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#3d5a80" }}
+                    style={{ color: "white" }}
                     className=" me-2"
                     icon={faYoutubeSquare}
                     size="2x"
@@ -173,7 +153,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#3d5a80" }}
+                    style={{ color: "white" }}
                     icon={faInstagramSquare}
                     size="2x"
                   />

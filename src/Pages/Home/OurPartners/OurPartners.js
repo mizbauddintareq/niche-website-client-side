@@ -8,7 +8,10 @@ const OurPartners = () => {
         <h1 className="text-danger text-center fw-bold">
           OUR STRATEGIC PARTNERS
         </h1>
-        <p className="text-center fw-bold" style={{ color: "#3d5a80" }}>
+        <p
+          className="text-center fw-bold"
+          style={{ color: "#3d5a80", lineHeight: "1.7" }}
+        >
           To be the most reliable retailer and wholesaler brand of drones,
           serving national and international clients alike, catering to their
           specific drone technology needs.Our team is one of the most

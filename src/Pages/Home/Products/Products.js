@@ -40,14 +40,11 @@ const Products = () => {
             >
               <Card.Img variant="top" src={pd.thumb} />
               <Card.Body>
-                <Card.Title
-                  className="text-uppercase fw-bold"
-                  style={{ color: "#6a040f" }}
-                >
+                <Card.Title className="text-uppercase text-white">
                   {pd.name}
                 </Card.Title>
                 <h6 style={{ color: "#9d0208" }}>Price: ${pd.price}</h6>
-                <Card.Text style={{ color: "#3d5a80" }}>{pd.des}</Card.Text>
+                <Card.Text>{pd.des.slice(0, 130)}</Card.Text>
                 <Button
                   style={{ backgroundColor: "#6a040f" }}
                   as={Link}
