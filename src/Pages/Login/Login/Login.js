@@ -5,7 +5,7 @@ import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../Context/useAuth";
 const Login = () => {
-  const { user, error, handleUserLogin, loading } = useAuth();
+  const { error, handleUserLogin, loading } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const { register, handleSubmit } = useForm();
@@ -18,8 +18,11 @@ const Login = () => {
       <div className="row">
         <div className="col-md-5 mx-auto text-center">
           {!loading && (
-            <div className="card shadow-lg p-3 mb-5 bg-body rounded">
-              <p>
+            <div
+              className="card shadow-lg p-3 mb-5 rounded"
+              style={{ backgroundColor: "#0d2c54" }}
+            >
+              <p className="text-white">
                 Don't have an account?{" "}
                 <Link to="/register">Please Register</Link>
               </p>
@@ -37,7 +40,8 @@ const Login = () => {
                   {...register("password")}
                 />
                 <input
-                  className="btn mb-3 btn-success px-5"
+                  style={{ backgroundColor: "#ee6c4d" }}
+                  className="btn mb-3 text-white px-5"
                   type="submit"
                   value="Login"
                 />
@@ -46,7 +50,6 @@ const Login = () => {
             </div>
           )}
           {loading && <Spinner animation="border" variant="info" />}
-          {user?.email && <Alert variant="success">Login Successful</Alert>}
         </div>
       </div>
     </Container>

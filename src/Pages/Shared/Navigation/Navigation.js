@@ -29,11 +29,7 @@ const Navigation = () => {
                 </Nav.Link>
               )}
               {user?.email ? (
-                <Button
-                  className="bg-warning"
-                  style={{ color: "#14213d" }}
-                  onClick={logOut}
-                >
+                <Button style={{ backgroundColor: "#ee6c4d" }} onClick={logOut}>
                   Logout
                 </Button>
               ) : (

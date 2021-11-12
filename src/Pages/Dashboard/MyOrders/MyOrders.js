@@ -27,8 +27,8 @@ const MyOrders = () => {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -54,8 +54,8 @@ const MyOrders = () => {
         {orders.map((order) => (
           <div key={order._id} className="col-md-4">
             <div
-              className="card mb-3 h-100"
-              style={{ backgroundColor: "#a8dadc", color: "#1d3557" }}
+              className="h-100 text-secondary shadow-lg mb-2 border border-secondary rounded"
+              style={{ backgroundColor: "#000000" }}
             >
               <div className="row g-0">
                 <div className="col-md-4">
@@ -76,7 +76,7 @@ const MyOrders = () => {
 
                     <Button
                       onClick={() => handleDelete(order._id)}
-                      variant="danger"
+                      style={{ backgroundColor: "#6a040f" }}
                     >
                       DELETE
                     </Button>

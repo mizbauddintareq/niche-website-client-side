@@ -8,7 +8,7 @@ import slider3 from "../../../images/slider3.jpg";
 const Slider = () => {
   return (
     <Carousel fade>
-      <Carousel.Item className="slider-item">
+      <Carousel.Item className="slider-item" interval={1500}>
         <img className="d-block w-100" src={slider1} alt="First slide" />
         <Carousel.Caption className="text-end">
           <h3 style={{ color: "#e0fbfc", fontWeight: "bold" }}>MAVIC MINI</h3>
@@ -21,7 +21,7 @@ const Slider = () => {
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item className="slider-item">
+      <Carousel.Item className="slider-item" interval={1500}>
         <img className="d-block w-100" src={slider2} alt="Second slide" />
 
         <Carousel.Caption className="text-start">
@@ -35,7 +35,7 @@ const Slider = () => {
           </Button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item className="slider-item">
+      <Carousel.Item className="slider-item" interval={1500}>
         <img className="d-block w-100" src={slider3} alt="Third slide" />
 
         <Carousel.Caption>

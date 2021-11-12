@@ -17,10 +17,9 @@ import {
 const Footer = () => {
   return (
     <div
-      className="  pt-5 pb-4"
+      className="  pt-5 pb-4 border-top border-secondary"
       style={{
-        backgroundColor: "#457b9d",
-        color: "#f1faee",
+        color: "#3d5a80",
         marginTop: "80px",
       }}
     >
@@ -29,114 +28,108 @@ const Footer = () => {
           <div className="col-md-3 mx-auto mt-3">
             <h5
               className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#a8dadc" }}
+              style={{ color: "#9d0208" }}
             >
-              Breakthrough travels
+              drones world
             </h5>
             <p>
-              The success of any tour depends on logistics. These basic, behind
-              the scenes, practical arrangements are the very necessary nuts and
-              bolts of making a trip a success – from making sure a vehicle
-              arrives at the right location, to the crucial matter of timing.
-              Meticulous planning is all very well, but actually making it
-              happen is key. We depend on our local partners to ensure our
-              escorted trips run smoothly.
+              Drones World specializes in the supply of high-end drones for a
+              variety of commercial, private, and recreational needs. A leading
+              DJI-authorized service center, we’re able to deliver the highest
+              quality drones at the highest quality service. Whether you require
+              drones for aerial filming, videography, surveying, or anything
+              else, we have the drones available to suit your needs. With an
+              extensive product range as well as custom drone solutions
+              available.
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
             <h5
               className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#a8dadc" }}
+              style={{ color: "#9d0208" }}
             >
               offers
             </h5>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Maldives Beaches</p>{" "}
+              <p>Maldives Beaches</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Bali, Indonesia</p>{" "}
+              <p>Bali, Indonesia</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Pattaya Beach</p>{" "}
+              <p>Pattaya Beach</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>The Eiffel Tower</p>{" "}
+              <p>The Eiffel Tower</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Hawaii Islands</p>{" "}
+              <p>Hawaii Islands</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Great Wall Of China</p>{" "}
+              <p>Great Wall Of China</p>{" "}
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
             <h5
               className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#a8dadc" }}
+              style={{ color: "#9d0208" }}
             >
               useful links
             </h5>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Agents</p>{" "}
+              <p>Agents</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Login</p>{" "}
+              <p>Login</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Privacy Policy</p>{" "}
+              <p>Privacy Policy</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Terms & Conditions</p>{" "}
+              <p>Terms & Conditions</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Booking</p>{" "}
+              <p>Booking</p>{" "}
             </p>
             <p>
               {" "}
-              <p style={{ color: "#f1faee" }}>Developer</p>{" "}
+              <p>Developer</p>{" "}
             </p>
           </div>
 
           <div className="col-md-3 mx-auto mt-3">
             <h5
               className="text-uppercase mb-4 fw-bold"
-              style={{ color: "#a8dadc" }}
+              style={{ color: "#9d0208" }}
             >
               contact information
             </h5>
             <p>
-              <FontAwesomeIcon
-                style={{ color: "#f1faee" }}
-                icon={faLocationArrow}
-              />{" "}
-              Kolatoli, Cox's Bazar, Bangladesh
+              <FontAwesomeIcon icon={faLocationArrow} /> Kolatoli, Cox's Bazar,
+              Bangladesh
             </p>
             <p>
-              <FontAwesomeIcon style={{ color: "#f1faee" }} icon={faPhone} />{" "}
-              088 +880 1580541540
+              <FontAwesomeIcon icon={faPhone} /> 088 +880 1580541540
             </p>
             <p>
-              <FontAwesomeIcon style={{ color: "#f1faee" }} icon={faEnvelope} />{" "}
+              <FontAwesomeIcon icon={faEnvelope} />{" "}
               contact@breakthroughtravels.com
             </p>
             <p>
-              <FontAwesomeIcon
-                style={{ color: "#f1faee" }}
-                icon={faFirefoxBrowser}
-              />{" "}
+              <FontAwesomeIcon icon={faFirefoxBrowser} />{" "}
               www.breakthrough-travel.web.app
             </p>
           </div>
@@ -146,7 +139,7 @@ const Footer = () => {
           <div className=" col-md-7 ">
             <p>
               {" "}
-              <span style={{ color: "#a8dadc" }}>Mizba Uddin Tareq</span> © 2021
+              <span style={{ color: "#9d0208" }}>Mizba Uddin Tareq</span> © 2021
               All Right Reserved
             </p>
           </div>
@@ -156,7 +149,7 @@ const Footer = () => {
               <ul className="list-unstyled list-inline">
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#f1faee" }}
+                    style={{ color: "#3d5a80" }}
                     className="me-2"
                     icon={faFacebookSquare}
                     size="2x"
@@ -164,7 +157,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#f1faee" }}
+                    style={{ color: "#3d5a80" }}
                     className=" me-2"
                     icon={faTwitterSquare}
                     size="2x"
@@ -172,7 +165,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#f1faee" }}
+                    style={{ color: "#3d5a80" }}
                     className=" me-2"
                     icon={faYoutubeSquare}
                     size="2x"
@@ -180,7 +173,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/">
                   <FontAwesomeIcon
-                    style={{ color: "#f1faee" }}
+                    style={{ color: "#3d5a80" }}
                     icon={faInstagramSquare}
                     size="2x"
                   />

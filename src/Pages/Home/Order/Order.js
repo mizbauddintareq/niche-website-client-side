@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+
 import { Card, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useHistory, useLocation, useParams } from "react-router";
@@ -47,7 +47,7 @@ const Order = () => {
     reset();
   }, [pd]);
   return (
-    <Container>
+    <Container className="mt-5">
       <div className="row d-flex justify-content-around align-items-center">
         <div className="col-md-5">
           <Card className="bg-dark text-white">
@@ -59,7 +59,13 @@ const Order = () => {
           </Card>
         </div>
         <div className="col-md-6 mx-auto text-center">
-          <div className="card shadow-lg p-3 mb-5 bg-body rounded">
+          <h1 className="fw-bold text-uppercase text-danger">
+            Please confirm your order
+          </h1>
+          <div
+            className="card shadow-lg p-3 my-4 rounded"
+            style={{ backgroundColor: "#0d2c54" }}
+          >
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 defaultValue={user.displayName}
@@ -103,8 +109,9 @@ const Order = () => {
               />
 
               <input
+                style={{ backgroundColor: "#ee6c4d" }}
+                className="btn mb-3 text-white px-5 "
                 type="submit"
-                className="btn mb-3 btn-success px-4"
                 value="Confirm Order"
               />
             </form>

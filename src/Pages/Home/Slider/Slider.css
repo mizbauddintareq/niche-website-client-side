@@ -1,20 +1,15 @@
-.slider-item::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #000;
-  opacity: 0.5;
-}
 .carousel-indicators [data-bs-target] {
   display: none !important;
 }
 body {
   background-color: #000000;
 }
-/* .btn-primary {
+.btn-primary {
   border-color: #000000;
-} */
+}
+.logo img {
+  filter: grayscale(100%);
+}
+.logo img:hover {
+  filter: none;
+}

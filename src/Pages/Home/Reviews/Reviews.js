@@ -13,47 +13,51 @@ const Reviews = () => {
   return (
     <Container fluid>
       <div className="text-center" style={{ marginTop: "80px" }}>
-        <h1 className="fw-bold text-uppercase" style={{ color: "#e63946" }}>
-          Testimonials
+        <h1 className="fw-bold" style={{ color: "#e63946" }}>
+          CUSTOMER REVIEWS
         </h1>
 
-        <p className="text-muted">
-          Our clients come from very different walks of life and age groups.
-          We’re delighted that many come back to travel on our escorted
-          historical tours and small group cruises again and again. We feel that
-          their testimonials describe who we are and what we do far better than
-          we ever could. Here’s a small selection.
+        <p className="fw-bold" style={{ color: "#3d5a80" }}>
+          With the consistent growth of drone technology with drones being
+          utilized across a full spectrum of applications, the need for high
+          quality, reliable drones is growing as well. We understand that our
+          customers need drones that are truly reliable, which is why we are
+          confident you’ll find our vast inventory suitable. Our drones
+          encompass superior quality, innovation, and utility. From aerial
+          photography and videography to inspection solutions and more, we have
+          drones that are optimal for every application.
         </p>
       </div>
-      <Carousel className="mt-4">
-        <Carousel.Item>
-          <Row xs={1} md={2} className="g-4 text-center">
-            {reviews.map((review) => (
-              <Col key={review._id}>
-                <Card
-                  className="shadow p-3 rounded h-100"
-                  style={{ backgroundColor: "#1d3557", color: "#f1faee" }}
+      <Row xs={1} md={4} className="g-4 mt-4">
+        {reviews.map((review) => (
+          <Col>
+            <Card
+              className="h-100 text-secondary shadow-lg border border-secondary rounded"
+              style={{ backgroundColor: "#000000" }}
+            >
+              <Card.Header className="text-center fw-bold">
+                <Rating
+                  className="text-warning"
+                  initialRating={review.rating}
+                  emptySymbol="far fa-star"
+                  fullSymbol="fas fa-star"
+                  readonly
+                />
+              </Card.Header>
+              <Card.Body>
+                <Card.Text>{review.comment}</Card.Text>
+                <div
+                  className="d-flex justify-content-between fw-bold"
+                  style={{ fontSize: "12px", color: "#3d5a80" }}
                 >
-                  <Card.Body>
-                    <Card.Title>{review.name}</Card.Title>
-                    <Card.Text>
-                      <h6>{review.email}</h6>
-                      <p>{review.comment}</p>
-                      <Rating
-                        className="text-warning"
-                        initialRating={review.rating}
-                        emptySymbol="far fa-star"
-                        fullSymbol="fas fa-star"
-                        readonly
-                      />
-                    </Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Carousel.Item>
-      </Carousel>
+                  <Card.Text>{review.name}</Card.Text>
+                  <Card.Text>{review.email}</Card.Text>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </Container>
   );
 };

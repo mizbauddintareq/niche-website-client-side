@@ -57,13 +57,25 @@ const MainProducts = () => {
         <Row xs={1} md={3} className="g-4">
           {products.map((pd) => (
             <Col key={pd._id}>
-              <Card className="h-100">
+              <Card
+                className="h-100 text-secondary shadow-lg mb-2 border border-secondary rounded"
+                style={{ backgroundColor: "#000000" }}
+              >
                 <Card.Img variant="top" src={pd.thumb} />
                 <Card.Body>
-                  <Card.Title>{pd.name}</Card.Title>
-                  <h6>Price: ${pd.price}</h6>
-                  <Card.Text>{pd.des}</Card.Text>
-                  <Button as={Link} to={`/order/${pd._id}`}>
+                  <Card.Title
+                    className="text-uppercase fw-bold"
+                    style={{ color: "#6a040f" }}
+                  >
+                    {pd.name}
+                  </Card.Title>
+                  <h6 style={{ color: "#9d0208" }}>Price: ${pd.price}</h6>
+                  <Card.Text style={{ color: "#3d5a80" }}>{pd.des}</Card.Text>
+                  <Button
+                    style={{ backgroundColor: "#6a040f" }}
+                    as={Link}
+                    to={`/order/${pd._id}`}
+                  >
                     Purchase
                   </Button>
                 </Card.Body>

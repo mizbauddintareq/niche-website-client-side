@@ -17,8 +17,11 @@ const Registration = () => {
       <div className="row">
         <div className="col-md-5 mx-auto text-center">
           {!loading && (
-            <div className="card shadow-lg p-3 mb-5 bg-body rounded">
-              <p>
+            <div
+              className="card shadow-lg p-3 mb-5 rounded"
+              style={{ backgroundColor: "#0d2c54" }}
+            >
+              <p className="text-white">
                 Already Registered? <Link to="/login">Please Login</Link>
               </p>
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -41,7 +44,8 @@ const Registration = () => {
                   {...register("password")}
                 />
                 <input
-                  className="btn mb-3 btn-success px-5"
+                  style={{ backgroundColor: "#ee6c4d" }}
+                  className="btn mb-3 text-white px-5"
                   type="submit"
                   value="Register"
                 />
@@ -50,9 +54,6 @@ const Registration = () => {
             </div>
           )}
           {loading && <Spinner animation="border" variant="info" />}
-          {user?.email && (
-            <Alert variant="success">Registration Successful</Alert>
-          )}
         </div>
       </div>
     </Container>
