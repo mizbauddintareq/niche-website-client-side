@@ -2,7 +2,7 @@ import React from "react";
 import MainProducts from "../MainProducts/MainProducts";
 import OurPartners from "../OurPartners/OurPartners";
 import Reviews from "../Reviews/Reviews";
-
+import "./Home.css";
 import Slider from "../Slider/Slider";
 
 const Home = () => {

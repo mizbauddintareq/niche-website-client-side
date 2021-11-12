@@ -49,7 +49,7 @@ const MyOrders = () => {
     return Loading();
   }
   return (
-    <Container fluid>
+    <Container fluid className="mt-5">
       <div className="row g-4">
         {orders.map((order) => (
           <div key={order._id} className="col-md-4">
@@ -66,9 +66,11 @@ const MyOrders = () => {
                   />
                 </div>
                 <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title text-uppercase">{order.pName}</h5>
-                    <p className="card-text text-muted">User: {order.name}</p>
+                  <div className="card-body" style={{ color: "#3d5a80" }}>
+                    <h5 className="text-uppercase" style={{ color: "#ffffff" }}>
+                      {order.pName}
+                    </h5>
+                    <p className="card-text">User: {order.name}</p>
                     <p className="card-text">Address: {order.address}</p>
                     <p className="card-text">Phone: {order.phone}</p>
                     <p className="card-text">Price: {order.price} USD</p>

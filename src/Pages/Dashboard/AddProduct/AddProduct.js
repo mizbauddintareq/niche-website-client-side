@@ -29,12 +29,17 @@ const AddProduct = () => {
       });
   };
   return (
-    <Container className="my-5">
+    <Container className="mt-5">
       <div className="row">
-        <h1 className="text-center mb-5">Please Add An Order</h1>
-        <div className="col-md-5 mx-auto text-center">
+        <h1 className="text-center mb-4 fw-bold text-uppercase text-danger">
+          you can add a new product here if needed
+        </h1>
+        <div className="col-md-6 mx-auto text-center">
           {!loading && (
-            <div className="card shadow-lg p-3 mb-5 bg-body rounded">
+            <div
+              className="card shadow-lg p-3 mb-5 rounded"
+              style={{ backgroundColor: "#0d2c54" }}
+            >
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                   className="p-2 mb-2 form-control"
@@ -55,14 +60,15 @@ const AddProduct = () => {
                   {...register("thumb", { required: true })}
                 />
                 <textarea
-                  className="p-2 mb-2 form-control"
+                  className="p-2 mb-4 form-control"
                   type="text"
                   placeholder="Description"
                   {...register("des", { required: true })}
                 />
 
                 <input
-                  className="btn mb-3 btn-success px-5"
+                  style={{ backgroundColor: "#ee6c4d" }}
+                  className="btn mb-3 text-white px-5"
                   type="submit"
                   value="Add Product"
                 />

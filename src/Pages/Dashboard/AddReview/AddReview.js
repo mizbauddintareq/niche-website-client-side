@@ -28,10 +28,16 @@ const AddReview = () => {
       });
   };
   return (
-    <div>
+    <div className="mt-5">
       <div className="row">
+        <h1 className="fw-bold text-uppercase text-danger text-center">
+          if you like our service you can write a review here
+        </h1>
         <div className="col-md-6 mx-auto text-center">
-          <div className="card shadow-lg p-3 mb-5 bg-body rounded">
+          <div
+            className="card shadow-lg p-3 mb-5 mt-4 rounded"
+            style={{ backgroundColor: "#0d2c54" }}
+          >
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className="p-2 mb-2 form-control"
@@ -56,7 +62,8 @@ const AddReview = () => {
                 {...register("comment")}
               />
               <input
-                className="btn mb-3 btn-success px-5"
+                style={{ backgroundColor: "#ee6c4d" }}
+                className="btn mb-3 text-white px-5"
                 type="submit"
                 value="Add Review"
               />

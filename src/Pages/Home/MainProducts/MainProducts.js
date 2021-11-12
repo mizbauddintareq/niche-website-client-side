@@ -64,13 +64,13 @@ const MainProducts = () => {
                 <Card.Img variant="top" src={pd.thumb} />
                 <Card.Body>
                   <Card.Title
-                    className="text-uppercase fw-bold"
-                    style={{ color: "#6a040f" }}
+                    className="text-uppercase"
+                    style={{ color: "white" }}
                   >
                     {pd.name}
                   </Card.Title>
                   <h6 style={{ color: "#9d0208" }}>Price: ${pd.price}</h6>
-                  <Card.Text style={{ color: "#3d5a80" }}>{pd.des}</Card.Text>
+                  <Card.Text className="text-secondary">{pd.des}</Card.Text>
                   <Button
                     style={{ backgroundColor: "#6a040f" }}
                     as={Link}

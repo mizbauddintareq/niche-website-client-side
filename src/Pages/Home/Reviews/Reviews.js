@@ -47,8 +47,8 @@ const Reviews = () => {
               <Card.Body>
                 <Card.Text>{review.comment}</Card.Text>
                 <div
-                  className="d-flex justify-content-between fw-bold"
-                  style={{ fontSize: "12px", color: "#3d5a80" }}
+                  className="d-flex justify-content-between"
+                  style={{ fontSize: "12px", color: "white" }}
                 >
                   <Card.Text>{review.name}</Card.Text>
                   <Card.Text>{review.email}</Card.Text>

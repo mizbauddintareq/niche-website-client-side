@@ -27,10 +27,16 @@ const MakeAdmin = () => {
       });
   };
   return (
-    <div>
+    <div className="mt-5">
       <div className="row">
-        <div className="col-md-5 mx-auto text-center">
-          <div className="card shadow-lg p-3 mb-5 bg-body rounded">
+        <h1 className="text-danger text-uppercase text-center fw-bold">
+          make a new admin here
+        </h1>
+        <div className="col-md-5 mx-auto text-center mt-4">
+          <div
+            className="card shadow-lg p-3 mb-5 rounded"
+            style={{ backgroundColor: "#0d2c54" }}
+          >
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
                 className="p-2 mb-4 form-control"
@@ -40,7 +46,8 @@ const MakeAdmin = () => {
               />
 
               <input
-                className="btn mb-3 btn-success px-5"
+                style={{ backgroundColor: "#ee6c4d" }}
+                className="btn mb-3 text-white px-5"
                 type="submit"
                 value="Make Admin"
               />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Loading from "../../Loading/Loading";
@@ -25,8 +25,8 @@ const AllProducts = () => {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
@@ -53,41 +53,32 @@ const AllProducts = () => {
   }
   return (
     <Container fluid>
-      <div className="row g-4">
+      <Row xs={1} md={3} className="g-4 mt-4">
         {products.map((pd) => (
-          <div key={pd._id} className="col-md-4">
-            <div
-              className="card mb-3 h-100"
-              style={{ backgroundColor: "#a8dadc", color: "#1d3557" }}
+          <Col key={pd._id}>
+            <Card
+              className="h-100 text-secondary shadow-lg mb-2 border border-secondary rounded"
+              style={{ backgroundColor: "#000000" }}
             >
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img
-                    src={pd.thumb}
-                    className="img-fluid rounded-start h-100"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title text-uppercase">{pd.name}</h5>
-
-                    <p className="card-text">Price: {pd.price} USD</p>
-                    <p className="card-text">{pd.des}</p>
-
-                    <Button
-                      onClick={() => handleDelete(pd._id)}
-                      variant="danger"
-                    >
-                      DELETE
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <Card.Img variant="top" src={pd.thumb} />
+              <Card.Body>
+                <Card.Title className="text-uppercase text-white">
+                  {pd.name}
+                </Card.Title>
+                <h6 style={{ color: "#9d0208" }}>Price: ${pd.price}</h6>
+                <Card.Text style={{ color: "#3d5a80" }}>{pd.des}</Card.Text>
+                <Button
+                  onClick={() => handleDelete(pd._id)}
+                  style={{ backgroundColor: "#6a040f" }}
+                >
+                  DELETE
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
         ))}
-      </div>
+      </Row>
+      ;
     </Container>
   );
 };
