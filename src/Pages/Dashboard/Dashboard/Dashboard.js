@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar, Tab } from "react-bootstrap";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import useAuth from "../../Context/useAuth";
+import Status404 from "../../Status404/Status404";
 import AddProduct from "../AddProduct/AddProduct";
 import AddReview from "../AddReview/AddReview";
 import AllOrders from "../AllOrders/AllOrders";
@@ -48,7 +49,12 @@ const Dashboard = () => {
                   </Nav.Link>
                 </Nav>
               )}
-              <Nav.Link style={{ cursor: "pointer" }} onClick={logOut}>
+              <Nav.Link
+                as={Link}
+                to="/login"
+                style={{ cursor: "pointer" }}
+                onClick={logOut}
+              >
                 Logout
               </Nav.Link>
             </Nav>
@@ -86,6 +92,9 @@ const Dashboard = () => {
               </Route>
               <Route path={`${path}/allProducts`}>
                 <AllProducts />
+              </Route>
+              <Route path={`${path}/*`}>
+                <Status404 />
               </Route>
             </Switch>
           </Tab.Content>

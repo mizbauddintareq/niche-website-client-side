@@ -10,6 +10,7 @@ import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 import Registration from "./Pages/Login/Registration/Registration";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
+import Status404 from "./Pages/Status404/Status404";
 function App() {
   return (
     <AuthProvider>
@@ -36,6 +37,9 @@ function App() {
           </PrivateRoute>
           <Route path="/dashboard">
             <Dashboard />
+          </Route>
+          <Route path="*">
+            <Status404 />
           </Route>
         </Switch>
         <Footer></Footer>

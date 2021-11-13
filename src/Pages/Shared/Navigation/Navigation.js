@@ -42,7 +42,12 @@ const Navigation = () => {
                 </Nav.Link>
               )}
               {user?.email ? (
-                <Button style={{ backgroundColor: "#ee6c4d" }} onClick={logOut}>
+                <Button
+                  as={Link}
+                  to="/"
+                  style={{ backgroundColor: "#ee6c4d" }}
+                  onClick={logOut}
+                >
                   Logout
                 </Button>
               ) : (
