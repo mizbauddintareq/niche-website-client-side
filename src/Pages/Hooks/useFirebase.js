@@ -59,7 +59,7 @@ const useFirebase = () => {
     setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((results) => {
-        const redirect_uri = location?.state?.from || "/";
+        const redirect_uri = location?.state?.from || "/dashboard";
         history.push(redirect_uri);
         setError("");
       })

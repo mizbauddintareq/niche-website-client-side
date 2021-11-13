@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Table } from "react-bootstrap";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Loading from "../../Loading/Loading";
@@ -75,50 +75,56 @@ const AllOrders = () => {
   }
   return (
     <Container fluid className="mt-5">
-      <div className="row g-4">
-        {orders.map((order) => (
-          <div key={order._id} className="col-md-4">
-            <div
-              className="h-100 text-secondary shadow-lg mb-2 border border-secondary rounded"
-              style={{ backgroundColor: "#000000" }}
-            >
-              <div className="row g-0">
-                <div className="col-md-4">
+      <div>
+        <Table striped bordered hover className="text-white">
+          <thead>
+            <tr className="text-center">
+              <th>Product Image</th>
+              <th>Product Name</th>
+              <th>Customer Name</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          {orders.map((order) => (
+            <tbody key={order._id}>
+              <tr>
+                <td>
                   <img
+                    style={{ height: "auto", width: "100px" }}
                     src={order.thumb}
-                    className="img-fluid rounded-start h-75"
-                    alt="..."
+                    alt=""
                   />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body" style={{ color: "#3d5a80" }}>
-                    <h5 className="text-uppercase text-white">{order.pName}</h5>
-                    <p className="card-text">User: {order.name}</p>
-                    <p className="card-text">Address: {order.address}</p>
-                    <p className="card-text">Phone: {order.phone}</p>
-                    <p className="card-text">Price: {order.price} USD</p>
-                    <p className="card-text">Status: {order.status}</p>
-
-                    <div className="d-flex justify-content-between">
-                      <Button
-                        onClick={() => handleDelete(order._id)}
-                        variant="danger"
-                      >
-                        DELETE
-                      </Button>
-                      <Button
-                        style={{ backgroundColor: "#1d3557", color: "white" }}
-                        onClick={() => handleStatus(order._id)}
-                      >
-                        {order.status}
-                      </Button>
-                    </div>
+                </td>
+                <td style={{ color: "#3d5a80", fontWeight: "bold" }}>
+                  {order.pName}
+                </td>
+                <td style={{ color: "#3d5a80", fontWeight: "bold" }}>
+                  {order.name}
+                </td>
+                <td style={{ color: "#3d5a80", fontWeight: "bold" }}>
+                  {order.price}
+                </td>
+                <td>
+                  <div className="d-flex justify-content-between">
+                    <Button
+                      onClick={() => handleDelete(order._id)}
+                      variant="danger"
+                    >
+                      DELETE
+                    </Button>
+                    <Button
+                      style={{ backgroundColor: "#1d3557", color: "white" }}
+                      onClick={() => handleStatus(order._id)}
+                    >
+                      {order.status}
+                    </Button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+                </td>
+              </tr>
+            </tbody>
+          ))}
+        </Table>
       </div>
     </Container>
   );

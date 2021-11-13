@@ -18,15 +18,19 @@ const Dashboard = () => {
         <div className="col-md-2 mt-3">
           <Navbar sticky="top" variant="dark" className="fw-bold">
             <Nav justify className="flex-column">
-              <Nav.Link as={Link} to={`${url}/pay`}>
-                Pay
-              </Nav.Link>
-              <Nav.Link as={Link} to={`${url}/myOrders`}>
-                My Orders
-              </Nav.Link>
-              <Nav.Link as={Link} to={`${url}/addReview`}>
-                Review
-              </Nav.Link>
+              {!admin && (
+                <div className="text-center">
+                  <Nav.Link as={Link} to={`${url}/pay`}>
+                    Pay
+                  </Nav.Link>
+                  <Nav.Link as={Link} to={`${url}/myOrders`}>
+                    My Orders
+                  </Nav.Link>
+                  <Nav.Link as={Link} to={`${url}/addReview`}>
+                    Review
+                  </Nav.Link>
+                </div>
+              )}
 
               {admin && (
                 <Nav justify className="flex-column">
@@ -53,9 +57,15 @@ const Dashboard = () => {
         <div className="col-md-10 mx-auto">
           <Tab.Content>
             <Switch>
-              <Route exact path={path}>
-                <MyOrders />
-              </Route>
+              {admin ? (
+                <Route exact path={path}>
+                  <AllOrders />
+                </Route>
+              ) : (
+                <Route exact path={path}>
+                  <MyOrders />
+                </Route>
+              )}
               <Route path={`${path}/myOrders`}>
                 <MyOrders />
               </Route>

@@ -9,7 +9,16 @@ const Navigation = () => {
     <div>
       <Navbar variant="dark" expand="lg" style={{ backgroundColor: "#000000" }}>
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand
+            as={Link}
+            to="/"
+            className="text-danger"
+            style={{
+              fontFamily: "Yuji Boku",
+              fontWeight: "bold",
+              fontSize: "30px",
+            }}
+          >
             Drones World
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -19,12 +28,16 @@ const Navigation = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link as={Link} to="/products">
+              <Nav.Link as={Link} to="/products" className="text-danger">
                 Explore
               </Nav.Link>
-              {user?.email && <Nav.Link>Hello! {user.displayName}</Nav.Link>}
               {user?.email && (
-                <Nav.Link as={Link} to="/dashboard">
+                <Nav.Link className="text-danger">
+                  Hello! {user.displayName}
+                </Nav.Link>
+              )}
+              {user?.email && (
+                <Nav.Link as={Link} to="/dashboard" className="text-danger">
                   DashBoard
                 </Nav.Link>
               )}
@@ -33,7 +46,7 @@ const Navigation = () => {
                   Logout
                 </Button>
               ) : (
-                <Nav.Link as={Link} to="/login">
+                <Nav.Link as={Link} to="/login" className="text-danger">
                   Login
                 </Nav.Link>
               )}
