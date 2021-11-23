@@ -32,7 +32,7 @@ const AddProduct = () => {
     <Container className="mt-5">
       <div className="row">
         <h1 className="text-center mb-4 fw-bold text-uppercase text-danger">
-          you can add a new product here if needed
+          you can add a new product here if needed.
         </h1>
         <div className="col-md-6 mx-auto text-center">
           {!loading && (

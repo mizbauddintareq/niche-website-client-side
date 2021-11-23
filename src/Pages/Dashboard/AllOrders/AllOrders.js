@@ -76,7 +76,7 @@ const AllOrders = () => {
   return (
     <Container fluid className="mt-5">
       <div>
-        <Table striped bordered hover className="text-white">
+        <Table responsive striped bordered hover className="text-white">
           <thead>
             <tr className="text-center">
               <th>Product Image</th>
